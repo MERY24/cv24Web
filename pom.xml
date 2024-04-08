@@ -40,6 +40,22 @@
     <optional>true</optional>
 </dependency>
 
+
+ <dependency>
+        <groupId>jakarta.xml.bind</groupId>
+        <artifactId>jakarta.xml.bind-api</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.glassfish.jaxb</groupId>
+        <artifactId>jaxb-runtime</artifactId>
+    </dependency>
+    
+    <dependency>
+    <groupId>com.fasterxml.jackson.dataformat</groupId>
+    <artifactId>jackson-dataformat-xml</artifactId> 
+</dependency>
+
 	</dependencies>
 
 	<build>
@@ -49,6 +65,14 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		
+		
+		<resources>
+             <resource>
+                <directory>src/main/resources/xml</directory>
+             </resource>
+        </resources>
+		
 	</build>
 
 </project>
