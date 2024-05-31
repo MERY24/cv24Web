@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cv24:cv24 xmlns:cv24='http://univ.fr/cv24' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://univ.fr/cv24 cv24.tp1.xsd '>
+  <cv24:Identité>
+    <cv24:genre>M</cv24:genre>
+    <cv24:nom>DUPOONT</cv24:nom>
+    <cv24:prenom>Jean</cv24:prenom>
+    <cv24:tel>0123456789</cv24:tel>
+    <cv24:mel>jean.dupont@example.com</cv24:mel>
+  </cv24:Identité>
+  <cv24:Objectif statut='Stage'>Développement web</cv24:Objectif>
+  <cv24:ExpériencePro>
+    <cv24:detail>
+      <cv24:datedeb>2023-09-01</cv24:datedeb>
+      <cv24:datefin>2024-02-01</cv24:datefin>
+      <cv24:titre>Enseignant d'anglais</cv24:titre>
+    </cv24:detail>
+  </cv24:ExpériencePro>
+  <cv24:Compétences>
+    <cv24:diplome niveau='5'>
+      <cv24:intitule>Master en informatique</cv24:intitule>
+      <cv24:date>2023-06-30</cv24:date>
+      <cv24:institut>Université de Paris</cv24:institut>
+    </cv24:diplome>
+    <cv24:certif>
+      <cv24:datedeb>2023-07-01</cv24:datedeb>
+      <cv24:datefin>2023-11-30</cv24:datefin>
+      <cv24:titre>Cloud Computing</cv24:titre>
+    </cv24:certif>
+  </cv24:Compétences>
+  <cv24:Divers>
+    <cv24:lv cert='MAT' lang='fr' nivi='10' nivs='A1'/>
+    <cv24:autre comment='Formation de 2 mois' titre='Formation au secourisme'/>
+  </cv24:Divers>
+</cv24:cv24>

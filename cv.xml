@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cv24 xmlns="http://univ.fr/cv24">
+    <Identité>
+        <genre>M</genre>
+        <nom>Doe</nom>
+        <prenom>John</prenom>
+        <tel>1234567890</tel>
+        <mel>john.doe@example.com</mel>
+    </Identité>
+    <Objectif statut="STAGE">Développeur Java expérimenté</Objectif>
+    <ExpériencePro>
+        <detail>
+            <datedeb>Wed May 29 07:07:40 CEST 2024</datedeb>
+            <titre>Développeur Java</titre>
+        </detail>
+    </ExpériencePro>
+    <Compétences>
+        <diplome niveau="BAC_3">
+            <intitule>Licence Informatique</intitule>
+            <date>Wed May 29 07:07:40 CEST 2024</date>
+            <institut>Université XYZ</institut>
+        </diplome>
+    </Compétences>
+    <Divers>
+        <lv lang="EN" cert="TOEIC" nivs="C1" nivi="850"/>
+        <autre titre="Autre compétence" comment="Commentaire sur autre compétence"/>
+    </Divers>
+</cv24>

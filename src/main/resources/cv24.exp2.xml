@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cv24 xmlns="http://univ.fr/cv24"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://univ.fr/cv24 cv24.tp1.xsd">
+
+  <Identité>
+    <genre>M</genre>
+    <nom>SMITH</nom>
+    <prenom>John</prenom>
+    <tel>1234567890</tel>
+    <mel>john.smith@example.com</mel>
+  </Identité>
+
+  <Objectif statut="Emploi">Full Stack Developer with expertise in JavaScript frameworks</Objectif>
+
+  <ExpériencePro>
+    <detail>
+      <datedeb>2020-06-01</datedeb>
+      <datefin>2021-12-31</datefin>
+      <titre>Web Development Intern</titre>
+    </detail>
+    <detail>
+      <datedeb>2022-01-15</datedeb>
+      <datefin>2023-05-31</datefin>
+      <titre>Software Engineer</titre>
+    </detail>
+  </ExpériencePro>
+
+  <Compétences>
+    <diplome niveau="7">
+      <intitule>Master in Computer Science</intitule>
+      <date>2020-05-15</date>
+      <institut>University of Technology</institut>
+    </diplome>
+    <diplome niveau="6">
+      <intitule>Licence in Applied Mathematics</intitule>
+      <date>2018-05-30</date>
+      <institut>University of Technology</institut>
+    </diplome>
+    <certif>
+      <datedeb>2023-07-01</datedeb>
+      <datefin>2023-11-30</datefin>
+      <titre>React.js Certification</titre>
+    </certif>
+  </Compétences>
+
+  <Divers>
+    <lv lang="FR" cert="TOEIC" nivs="C1" nivi="820"/>
+    <lv lang="EN" cert="CLES" nivs="C2" nivi="890"/>
+    <autre titre="E-commerce Website" comment="Developed a fully functional e-commerce website using React.js"/>
+  </Divers>
+
+</cv24>

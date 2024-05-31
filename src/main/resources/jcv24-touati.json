@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "154156ab-1a9a-4864-a984-5380fe53f55e",
+		"name": "cv24-touati",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16208984",
+		"_collection_link": "https://www.postman.com/galactic-astronaut-19411/workspace/apicv24/collection/16208984-154156ab-1a9a-4864-a984-5380fe53f55e?action=share&source=collection_link&creator=16208984"
+	},
+	"item": [
+		{
+			"name": "XmlCV",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/cv24/xml?id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"cv24",
+						"xml"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "XmlCVs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/cv24/resume/xml",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"cv24",
+						"resume",
+						"xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HtmlCVs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/cv24/resume",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"cv24",
+						"resume"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HtmlCV",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/cv24/html?id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"cv24",
+						"html"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertCv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    <?xml version='1.0' encoding='UTF-8'?>\n    <cv24:cv24 xmlns:cv24='http://univ.fr/cv24' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://univ.fr/cv24 cv24.tp1.xsd '>\n    <cv24:Identité>\n        <cv24:genre>M</cv24:genre>\n        <cv24:nom>DUPONT</cv24:nom>\n        <cv24:prenom>Jean</cv24:prenom>\n        <cv24:tel>0123456789</cv24:tel>\n        <cv24:mel>jean.dupont@example.com</cv24:mel>\n    </cv24:Identité>\n    <cv24:Objectif statut='Stage'>Développement web</cv24:Objectif>\n    <cv24:ExpériencePro>\n        <cv24:detail>\n        <cv24:datedeb>2023-09-01</cv24:datedeb>\n        <cv24:datefin>2024-02-01</cv24:datefin>\n        <cv24:titre>Enseignant d'anglais</cv24:titre>\n        </cv24:detail>\n    </cv24:ExpériencePro>\n    <cv24:Compétences>\n        <cv24:diplome niveau='5'>\n        <cv24:intitule>Master en informatique</cv24:intitule>\n        <cv24:date>2023-06-30</cv24:date>\n        <cv24:institut>Université de Paris</cv24:institut>\n        </cv24:diplome>\n        <cv24:certif>\n        <cv24:datedeb>2023-07-01</cv24:datedeb>\n        <cv24:datefin>2023-11-30</cv24:datefin>\n        <cv24:titre>Cloud Computing</cv24:titre>\n        </cv24:certif>\n    </cv24:Compétences>\n    <cv24:Divers>\n        <cv24:lv cert='MAT' lang='fr' nivi='10' nivs='A1'/>\n        <cv24:autre comment='Formation de 2 mois' titre='Formation au secourisme'/>\n    </cv24:Divers>\n    </cv24:cv24>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/cv24/insert",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"cv24",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete cv",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    <?xml version='1.0' encoding='UTF-8'?>\n    <cv24:cv24 xmlns:cv24='http://univ.fr/cv24' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://univ.fr/cv24 cv24.tp1.xsd '>\n    <cv24:Identité>\n        <cv24:genre>M</cv24:genre>\n        <cv24:nom>DUPONT</cv24:nom>\n        <cv24:prenom>Jean</cv24:prenom>\n        <cv24:tel>0123456789</cv24:tel>\n        <cv24:mel>jean.dupont@example.com</cv24:mel>\n    </cv24:Identité>\n    <cv24:Objectif statut='Stage'>Développement web</cv24:Objectif>\n    <cv24:ExpériencePro>\n        <cv24:detail>\n        <cv24:datedeb>2023-09-01</cv24:datedeb>\n        <cv24:datefin>2024-02-01</cv24:datefin>\n        <cv24:titre>Enseignant d'anglais</cv24:titre>\n        </cv24:detail>\n    </cv24:ExpériencePro>\n    <cv24:Compétences>\n        <cv24:diplome niveau='5'>\n        <cv24:intitule>Master en informatique</cv24:intitule>\n        <cv24:date>2023-06-30</cv24:date>\n        <cv24:institut>Université de Paris</cv24:institut>\n        </cv24:diplome>\n        <cv24:certif>\n        <cv24:datedeb>2023-07-01</cv24:datedeb>\n        <cv24:datefin>2023-11-30</cv24:datefin>\n        <cv24:titre>Cloud Computing</cv24:titre>\n        </cv24:certif>\n    </cv24:Compétences>\n    <cv24:Divers>\n        <cv24:lv cert='MAT' lang='fr' nivi='10' nivs='A1'/>\n        <cv24:autre comment='Formation de 2 mois' titre='Formation au secourisme'/>\n    </cv24:Divers>\n    </cv24:cv24>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/cv24/delete/:id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"cv24",
+						"delete",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

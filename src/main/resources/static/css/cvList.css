@@ -1,0 +1,96 @@
+/* Style pour le conteneur principal des CV */
+.cv-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Style pour l'en-tête de la liste de CV */
+.cv-header {
+    text-align: right;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Style pour les titres */
+h1, h2, h3 {
+    color: #007bff;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Style pour les paragraphes et les listes */
+p, li {
+    margin-bottom: 10px;
+}
+
+/* Style pour les tableaux */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #555;
+}
+
+/* Style pour les listes non ordonnées */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    list-style-type: none!important;
+    padding-left: 15px;
+    position: relative;
+}
+
+li::before {
+    content: "\2022";
+    color: #007bff;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+.navbar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+}
+.navbar a:hover {
+    text-decoration: underline;
+}
