@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cv Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="navbar">
+    <div>
+        <a href="/" th:href="@{/}">Accueil</a>
+        <a href="/help" th:href="@{/help}">Aide</a>
+        <a href="/cv24/xml" th:href="@{/cv24/xml}">Obtenir CV XML</a>
+        <a href="/cv24/html" th:href="@{/cv24/html}">Obtenir CV HTML</a>
+        <a href="/cv24/resume" th:href="@{/cv24/resume}">Résumé des CV</a>
+    </div>
+</div>
+<div class="cv-container">
+    <div id="cv-header">
+        <h5 th:text="${'Le : ' + date}"></h5>
+    </div>
+
+    <div>
+        <h1 th:text="${cv.objectif.value}"></h1>
+        <p th:text="${'Demande de ' + cv.objectif.statut}"></p>
+    </div>
+
+    <div>
+        <h2 th:text="${cv.identity.genre + ' ' + cv.identity.nom + ' ' + cv.identity.prenom }"></h2>
+        <p th:if="${ not #strings.isEmpty(cv.identity.tel) and not #strings.isEmpty(cv.identity.mel) }">
+            <span th:text="${'Tel: ' + cv.identity.tel}" th:unless="${#strings.isEmpty(cv.identity.tel)}"></span><br>
+            <span th:text="${'Mel: ' + cv.identity.mel}" th:unless="${#strings.isEmpty(cv.identity.mel)}"></span>
+        </p>
+    </div>
+
+    <div th:if="${cv.experiencePro != null}">
+        <h2>Expériences Professionnelles</h2>
+        <ol class="ex">
+            <th:block th:each="ex : ${cv.experiencePro.expDetails}">
+                <li th:text="${ex.titre + ' (du ' + ex.datedeb + ' au ' + ex.datefin + ')'}"></li>
+            </th:block>
+        </ol>
+    </div>
+
+    <div>
+        <h2>Diplômes</h2>
+        <table>
+            <th:block th:each="d : ${cv.competence.diplomes}">
+                <tr>
+                    <td th:text="${d.date}"></td>
+                    <td th:text="${d.intitule}"></td>
+                    <td th:text="${d.niveau}"></td>
+                    <td th:text="${d.institut}"></td>
+                </tr>
+            </th:block>
+        </table>
+    </div>
+
+    <div th:unless="${#lists.isEmpty(cv.competence.certifDetails)}">
+        <h2>Certifications</h2>
+        <table>
+            <th:block th:each="cert : ${cv.competence.certifDetails}">
+                <tr>
+                    <td th:text="${cert.datedeb + ' - ' + cert.datefin}"></td>
+                    <td th:text="${cert.titre}"></td>
+                </tr>
+            </th:block>
+        </table>
+    </div>
+
+    <div>
+        <h2>Langues</h2>
+        <ul>
+            <th:block th:each="lng : ${cv.divers.langueVivantes}">
+                <li>
+                    <span th:text="${lng.lang}"></span>
+                    <span th:text="${' (Certification: ' + lng.cert + ')' }" th:if="${not #strings.isEmpty(lng.cert)}"></span>
+                    <span th:text="${' (Niveau: ' + lng.nivs + ')' }" th:if="${not #strings.isEmpty(lng.nivs)}"></span>
+                    <span th:text="${' (Points: ' + lng.nivi + ')' }" th:if="${not #strings.isEmpty(lng.nivi)}"></span>
+                </li>
+            </th:block>
+        </ul>
+    </div>
+
+    <div th:unless="${#lists.isEmpty(cv.divers.autres)}">
+        <h2>Divers</h2>
+        <ul>
+            <th:block th:each="au : ${cv.divers.autres}">
+                <li>
+                    <span th:text="${au.titre}"></span>
+                    <span th:text="${' ' + au.comment}" th:if="${not #strings.isEmpty(au.comment)}"></span>
+                </li>
+            </th:block>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>

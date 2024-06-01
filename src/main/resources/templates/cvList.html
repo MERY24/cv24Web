@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>CV List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" th:href="@{/css/cvList.css}">
+</head>
+<body>
+<div class="navbar">
+    <div>
+        <a href="/" th:href="@{/}">Accueil</a>
+        <a href="/help" th:href="@{/help}">Aide</a>
+        <a href="/cv24/xml" th:href="@{/cv24/xml}">Obtenir CV XML</a>
+        <a href="/cv24/html" th:href="@{/cv24/html}">Obtenir CV HTML</a>
+        <a href="/cv24/resume" th:href="@{/cv24/resume}">Résumé des CV</a>
+    </div>
+</div>
+<h1>CV List</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Genre</th>
+        <th>Prénom</th>
+        <th>Nom</th>
+        <th>Objectif</th>
+        <th>Dernier diplome</th>
+    </tr>
+    <tr th:each="cv : ${cvList}">
+        <td th:text="${cv.id}"></td>
+        <td th:text="${cv.genre}"></td>
+        <td th:text="${cv.prenom}"></td>
+        <td th:text="${cv.nom}"></td>
+        <td th:text="${cv.statut} + ' - ' + ${cv.value}"></td>
+        <td th:if="${cv.Niveau != null}">
+            <span th:text="${cv.intitule} + ', ' + ${cv.institut} + ' (' + ${cv.date} + ')'"></span>
+        </td>
+        <td th:if="${cv.institut == null}">
+            Aucune information disponible à propos du diplôme.
+        </td>
+    </tr>
+</table>
+</body>
+</html>

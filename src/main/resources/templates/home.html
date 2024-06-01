@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Page d'accueil</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #007bff;
+            font-weight: bold;
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        p strong {
+            color: #007bff;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+        .navbar {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <div>
+        <a href="/" th:href="@{/}">Accueil</a>
+        <a href="/help" th:href="@{/help}">Aide</a>
+        <a href="/cv24/xml" th:href="@{/cv24/xml}">Obtenir CV XML</a>
+        <a href="/cv24/html" th:href="@{/cv24/html}">Obtenir CV HTML</a>
+        <a href="/cv24/resume" th:href="@{/cv24/resume}">Résumé des CV</a>
+    </div>
+</div>
+<div class="container">
+    <h1>Page d'accueil</h1>
+    <p><strong>Nom du projet:</strong> <span th:text="${projectName}"></span></p>
+    <p><strong>Numéro de version:</strong> <span th:text="${version}"></span></p>
+    <p><strong>Nom & Prénom de chaque membre de l'équipe:</strong> <span th:text="${teamMember}"></span></p>
+    <img th:src="@{${universityLogo}}" alt="Logo de l'Université de Rouen">
+</div>
+</body>
+</html>
